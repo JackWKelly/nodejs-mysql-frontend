@@ -9,10 +9,10 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-  apiBase = 'localhost:3000/api';
+  apiBase = 'http://localhost:3000/api';
 
   listOrders() {
-    return this.http.get(this.apiBase + '/order/read');
+    return this.http.get(this.apiBase + '/order/listorders');
   }
 
 }

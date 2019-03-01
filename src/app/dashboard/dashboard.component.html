@@ -1,3 +1,13 @@
-<p>
-  dashboard works!
-</p>
+<p>Dashboard</p>
+<div *ngIf="orders">
+  <p>Trying to display orders</p>
+  <p>{{orders}}</p>
+  <li class="list-group-item" *ngFor="let order of orders">
+    <p>Order number:  {{order.orderNumber}}</p>
+    <p>Order date:    {{order.orderDate}}</p>
+    <p>Delivery Date: {{order.deliveryDate}}</p>
+    <p>BuyerID:       {{order.buyerID}}</p>
+    <p>Card:          {{order.card}}</p>
+    <p>Address:       {{order.fullAddress}}</p>
+  </li>
+</div>
