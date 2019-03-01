@@ -11,13 +11,13 @@ export class DashboardComponent implements OnInit {
 
   constructor(private databaseService: DatabaseService) { }
 
-  orders = {};
+  orders: Order[];
 
   ngOnInit() {
     this.databaseService.listOrders()
       .subscribe(data => {
         console.log(data);
-        this.orders = data;
+        this.orders = <Order[]> data;
       })
       
 
