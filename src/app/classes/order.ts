@@ -5,5 +5,10 @@ export class Order {
     buyerID: number;
     card: number;
     fullAddress: string;
+    details?: OrderDetails;
 
+}
+
+export class OrderDetails {
+    cost?: Number;
 }

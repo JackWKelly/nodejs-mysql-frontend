@@ -1,13 +1,12 @@
 <p>Dashboard</p>
 <div *ngIf="orders">
-  <p>Trying to display orders</p>
-  <p>{{orders}}</p>
   <li class="list-group-item" *ngFor="let order of orders">
-    <p>Order number:  {{order.orderNumber}}</p>
-    <p>Order date:    {{order.orderDate}}</p>
-    <p>Delivery Date: {{order.deliveryDate}}</p>
-    <p>BuyerID:       {{order.buyerID}}</p>
-    <p>Card:          {{order.card}}</p>
-    <p>Address:       {{order.fullAddress}}</p>
+    <pre>Order number:  {{order.orderNumber}}</pre>
+    <pre>Order date:    {{order.orderDate | date}}</pre>
+    <pre>Delivery Date: {{order.deliveryDate | date}}</pre>
+    <pre>BuyerID:       {{order.buyerID}}</pre>
+    <pre>Card:          {{order.card}}</pre>
+    <pre>Address:       {{order.fullAddress}}</pre>
+    <div *ngIf="order.details"><pre *ngIf="order.details.cost">Cost:          {{order.details.cost}}</pre></div>
   </li>
 </div>
